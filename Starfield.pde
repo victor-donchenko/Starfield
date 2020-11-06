@@ -1,5 +1,5 @@
-final double display_width = 300;
-final double display_height = 300;
+final double display_width = 1000;
+final double display_height = 1000;
 final double min_new_particle_offset = 0.1;
 final double max_new_particle_offset = 0.3;
 final double oddball_chance = 0.3;
@@ -106,7 +106,7 @@ Vector2D get_random_border_pos(double radius) {
 }
 
 void setup() {
-  size(300, 300);
+  size(1000, 1000);
   particles = new ArrayList<Particle>();
   time_until_new_particle = 0;
 }
@@ -139,7 +139,7 @@ void draw() {
   if (time_until_new_particle <= 0) {
     Particle new_particle;
     
-    double radius = get_random_double(10, 30);
+    double radius = get_random_double(30, 90);
     
     Vector2D beginning_pos = get_random_border_pos(radius);
     
@@ -149,8 +149,8 @@ void draw() {
         radius,
         get_random_color(),
         new Vector2D(
-          get_random_double(-30, 30),
-          get_random_double(-30, 30)
+          get_random_double(-90, 90),
+          get_random_double(-90, 90)
         ),
         get_random_double(0, 2 * PI),
         get_random_double(-2 * PI, 2 * PI)
@@ -162,8 +162,8 @@ void draw() {
         radius,
         get_random_color(),
         new Vector2D(
-          get_random_double(-50, 50),
-          get_random_double(-50, 50)
+          get_random_double(-150, 150),
+          get_random_double(-150, 150)
         )
       );
     }
